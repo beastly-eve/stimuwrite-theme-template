@@ -14,15 +14,20 @@
 
 [sub_resource type="StyleBoxFlat" id=144]
 resource_local_to_scene = true
-bg_color = Color( 0.105882, 0.0666667, 0.0666667, 0.85098 )
+bg_color = Color( 0.780392, 0.901961, 1, 0.85098 )
+border_color = Color( 0.329412, 0.670588, 0.917647, 1 )
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
+expand_margin_left = 12.0
+expand_margin_right = 12.0
+expand_margin_top = 12.0
+expand_margin_bottom = 12.0
 
 [sub_resource type="StyleBoxFlat" id=116]
 resource_local_to_scene = true
-bg_color = Color( 0.83, 0.83, 0.83, 0.85 )
+bg_color = Color( 0.831373, 0.831373, 0.831373, 1 )
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
@@ -360,27 +365,27 @@ rect_pivot_offset = Vector2( 824, -112 )
 script = ExtResource( 12 )
 
 [node name="BackPanelOverride" type="PanelContainer" parent="."]
-margin_left = 154.0
-margin_top = -227.0
-margin_right = 784.0
-margin_bottom = 128.0
+margin_left = 933.0
+margin_top = -518.0
+margin_right = 1590.0
+margin_bottom = 74.0
 mouse_filter = 2
 custom_styles/panel = SubResource( 144 )
 
 [node name="PanelContainerOverride" type="PanelContainer" parent="."]
-margin_left = 168.0
-margin_top = -216.0
-margin_right = 768.0
-margin_bottom = 112.0
+margin_left = 933.0
+margin_top = -517.0
+margin_right = 1590.0
+margin_bottom = 75.0
 mouse_filter = 2
 custom_styles/panel = SubResource( 116 )
 
 [node name="WindowOverride" type="AcceptDialog" parent="."]
 visible = true
-margin_left = 288.0
-margin_top = -400.0
-margin_right = 536.0
-margin_bottom = -256.0
+margin_left = 432.0
+margin_top = -500.0
+margin_right = 880.0
+margin_bottom = -182.0
 mouse_filter = 2
 theme = SubResource( 49 )
 window_title = "Generic Pop Up"
@@ -389,10 +394,10 @@ dialog_autowrap = true
 
 [node name="AlertWindowOverride" type="AcceptDialog" parent="."]
 visible = true
-margin_left = 584.0
-margin_top = -400.0
-margin_right = 832.0
-margin_bottom = -256.0
+margin_left = 502.0
+margin_top = -127.0
+margin_right = 762.0
+margin_bottom = 38.0
 mouse_filter = 2
 theme = SubResource( 49 )
 window_title = "Alert Dialog"
@@ -404,10 +409,10 @@ anchor_left = 0.028
 anchor_top = 0.143
 anchor_right = 0.972
 anchor_bottom = 0.893
-margin_left = 181.312
-margin_top = -69.728
-margin_right = 266.688
-margin_bottom = 2.272
+margin_left = 946.312
+margin_top = -518.728
+margin_right = 1311.69
+margin_bottom = -127.728
 focus_mode = 0
 mouse_filter = 2
 theme = SubResource( 50 )
@@ -429,10 +434,10 @@ bookmark_gutter = true
 wrap_enabled = true
 
 [node name="OptionButtonOverride" type="OptionButton" parent="."]
-margin_left = 400.0
-margin_top = -120.0
-margin_right = 552.0
-margin_bottom = -96.0
+margin_left = 1424.0
+margin_top = -339.0
+margin_right = 1576.0
+margin_bottom = -315.0
 focus_mode = 0
 mouse_filter = 2
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -446,9 +451,10 @@ custom_styles/normal = SubResource( 128 )
 icon_align = 2
 
 [node name="LightThemePopUpMenu" type="PopupMenu" parent="OptionButtonOverride"]
-margin_left = 216.0
-margin_top = -88.0
-margin_right = 344.0
+visible = true
+margin_top = 31.0
+margin_right = 151.0
+margin_bottom = 131.0
 focus_mode = 0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
@@ -457,10 +463,10 @@ custom_styles/panel = SubResource( 53 )
 items = [ "Test", null, 0, false, false, 0, 0, null, "", false, "Test 2", null, 0, false, false, 1, 0, null, "", false ]
 
 [node name="SimpleButtonOverride" type="Button" parent="."]
-margin_left = 392.0
-margin_top = -72.0
-margin_right = 551.0
-margin_bottom = -36.0
+margin_left = 1449.0
+margin_top = -20.0
+margin_right = 1515.0
+margin_bottom = 12.0
 focus_mode = 0
 mouse_filter = 2
 custom_colors/font_color_disabled = Color( 0.262745, 0.262745, 0.262745, 1 )
@@ -473,13 +479,13 @@ custom_styles/pressed = SubResource( 130 )
 custom_styles/disabled = SubResource( 131 )
 custom_styles/normal = SubResource( 132 )
 disabled = true
-text = "Light Regular Button"
+text = "Button"
 
 [node name="ClosePanelButtonOverride" type="Button" parent="."]
-margin_left = 352.0
-margin_top = -120.0
-margin_right = 372.0
-margin_bottom = -82.0
+margin_left = 1408.0
+margin_top = -493.0
+margin_right = 1428.0
+margin_bottom = -455.0
 focus_mode = 0
 mouse_filter = 2
 mouse_default_cursor_shape = 6
@@ -494,10 +500,10 @@ keep_pressed_outside = true
 text = "||"
 
 [node name="ProgressBarOverride" type="ProgressBar" parent="."]
-margin_left = 208.0
-margin_top = -184.0
-margin_right = 540.0
-margin_bottom = -151.0
+margin_left = 951.0
+margin_top = -23.0
+margin_right = 1404.0
+margin_bottom = 10.0
 mouse_filter = 2
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_styles/fg = SubResource( 133 )
@@ -507,10 +513,10 @@ step = 0.1
 value = 42.0
 
 [node name="CheckButtonOverride" type="CheckButton" parent="."]
-margin_left = 384.0
-margin_top = -32.0
-margin_right = 593.0
-margin_bottom = 8.0
+margin_left = 448.0
+margin_top = -425.0
+margin_right = 657.0
+margin_bottom = -385.0
 focus_mode = 0
 mouse_filter = 2
 custom_colors/font_color_focus = Color( 0, 0, 0, 1 )
@@ -523,10 +529,10 @@ custom_icons/on = ExtResource( 4 )
 text = "Light Theme Check"
 
 [node name="LinkButtonOverride" type="LinkButton" parent="."]
-margin_left = 416.0
-margin_top = 48.0
-margin_right = 529.0
-margin_bottom = 66.0
+margin_left = 1286.0
+margin_top = 39.0
+margin_right = 1399.0
+margin_bottom = 57.0
 mouse_filter = 2
 custom_colors/font_color = Color( 0.121569, 0.121569, 0.121569, 1 )
 custom_colors/font_color_hover = Color( 0, 0.435294, 1, 1 )
@@ -534,30 +540,29 @@ custom_colors/font_color_pressed = Color( 0, 0.435294, 1, 1 )
 text = "Light Link Button"
 
 [node name="RichTextLabelOverride" type="RichTextLabel" parent="."]
-margin_left = 408.0
-margin_top = 16.0
-margin_right = 552.0
-margin_bottom = 40.0
+margin_left = 1425.0
+margin_top = -362.0
+margin_right = 1569.0
+margin_bottom = -338.0
 rect_pivot_offset = Vector2( 112, 16 )
 mouse_filter = 2
 custom_colors/default_color = Color( 0.121569, 0.121569, 0.121569, 1 )
 text = "Light Theme Label"
 
 [node name="RichTextLabelSecondaryOverride" type="RichTextLabel" parent="."]
-margin_left = 664.0
-margin_top = -303.0
-margin_right = 756.0
-margin_bottom = -282.0
+margin_left = 591.0
+margin_top = -21.0
+margin_right = 683.0
 rect_pivot_offset = Vector2( 112, 16 )
 mouse_filter = 2
 custom_colors/default_color = Color( 0.121569, 0.121569, 0.121569, 1 )
 text = "Pop up text"
 
 [node name="VolumeSliderOverride" type="HSlider" parent="."]
-margin_left = 416.0
-margin_top = 80.0
-margin_right = 536.0
-margin_bottom = 96.0
+margin_left = 1443.0
+margin_top = -227.0
+margin_right = 1563.0
+margin_bottom = -211.0
 focus_mode = 0
 mouse_filter = 2
 custom_icons/grabber_highlight = ExtResource( 10 )
@@ -569,10 +574,10 @@ step = 0.2
 value = 50.0
 
 [node name="BackgroundPlayButtonOverride" type="CheckBox" parent="."]
-margin_left = 560.0
-margin_top = -112.0
-margin_right = 584.0
-margin_bottom = -86.0
+margin_left = 1552.0
+margin_top = -370.0
+margin_right = 1576.0
+margin_bottom = -344.0
 focus_mode = 0
 mouse_filter = 2
 custom_icons/checked = ExtResource( 1 )
@@ -580,10 +585,10 @@ custom_icons/unchecked = ExtResource( 11 )
 pressed = true
 
 [node name="SpinBoxOverride" type="SpinBox" parent="."]
-margin_left = 192.0
-margin_top = -120.0
-margin_right = 328.0
-margin_bottom = -88.0
+margin_left = 1433.0
+margin_top = -489.0
+margin_right = 1569.0
+margin_bottom = -457.0
 mouse_filter = 2
 theme = SubResource( 139 )
 custom_icons/updown = ExtResource( 8 )
@@ -594,10 +599,10 @@ value = 200.0
 prefix = " "
 
 [node name="ItemListOverride" type="ItemList" parent="."]
-margin_left = 616.0
-margin_top = -104.0
-margin_right = 744.0
-margin_bottom = 16.0
+margin_left = 459.0
+margin_top = -358.0
+margin_right = 587.0
+margin_bottom = -238.0
 focus_mode = 0
 mouse_filter = 2
 theme = SubResource( 115 )
@@ -611,10 +616,10 @@ custom_styles/bg = SubResource( 143 )
 items = [ "Item 1", null, false, "Item 2", null, false, "Item 3", null, false, "Item 3", null, false, "Item 4", null, false, "Item 5", null, false, "Item 6", null, false, "Item 7", null, false ]
 
 [node name="CheckBoxOverride" type="CheckBox" parent="."]
-margin_left = 600.0
-margin_top = 73.0
-margin_right = 712.0
-margin_bottom = 105.0
+margin_left = 693.0
+margin_top = -422.0
+margin_right = 805.0
+margin_bottom = -390.0
 custom_colors/font_color_disabled = Color( 0.513726, 0.513726, 0.513726, 1 )
 custom_colors/font_color_focus = Color( 0.0823529, 0.0823529, 0.0823529, 1 )
 custom_colors/font_color_hover_pressed = Color( 0.0823529, 0.0823529, 0.0823529, 1 )
