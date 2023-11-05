@@ -46,7 +46,7 @@ The video format StimuWrite uses is the Ogg Vorbis Video format with the extensi
 
 1. Make sure you have your OGV and JPG background files, that share the same name with the requirements described above, in your assets folder
 2. `theme_background` - This must be set to true to enable the feature
-3. `theme_background_location` - Use the file path of your background, this will point to both the OGV and JPG, so do not include a file extension. Make sure the file paths are updated to match the changed folder names
+3. `theme_background_location` - Use the file path of your background, this will point to both the OGV and JPG, so **do not include a file extension**. Make sure the file paths are updated to match the changed folder names
 4. **If you are not using a video background, delete this code**
 
 #### Custom Emoji
@@ -59,16 +59,18 @@ You are now ready to make modifications to the theme element nodes and create yo
 
 #### Helpful Info
 
-- Did you remember to change the root node of this scene to your theme id?
 - Customizing these Control nodes takes place in the Inspector panel that appears on the right side of the screen when you click on one. 
 - Most of the changes are made in the **Theme Overrides** section. Expand the subsections here to see what has been overridden already to figure out what you can change.
 - Some elements are also defined in the **Theme** section, such as scrollbars.
 - In general, you will see what you can change by if it is already "overridden" in the inspector. Not everything that can be changed in the Godot UI will be respected by StimuWrite.
+- Everything takes place in the styleboxes and options in the template nodes. Any new nodes you add will be ignored.
+- To add images to the elements, use StyleBoxTexture
 - You can also change CanvasItem > Visibility > Modulate for color tinting
 - CanvasItem > Material can be updated as well. This gives you the option of using [Shaders](https://godotshaders.com/shader-type/canvas_item/) 🤯
 - Click the reset circular arrow icon to start fresh on elements you want to style
 - Detailed documentation of Godot's GUI skinning can be found here https://docs.godotengine.org/en/3.5/tutorials/ui/gui_skinning.html
 - Changing fonts is currently not supported
+- **Not working?** Did you remember to change the root node of this scene to your theme id? Does your folder's name match with the folder_name variable? 
 
 ## Exporting your theme
 
@@ -86,7 +88,7 @@ To test, load your theme file into StimuWrite like any other theme. Unfortunatel
 It's possible that you may break StimuWrite or it will give you an error when trying to install your theme. If that happens and the DELETE ALL button doesn't do the trick, close StimuWrite and go to the user folder in your file system and delete `stimuwrite.cfg` and the `addons` folder. You can find them here: 
 
 Windows `%APPDATA%\Godot\app_userdata\StimuWrite\`  
-macOS: `~/Library/Application Support/Godot/app_userdata/StimuWrite/`  
+macOS: `~/Library/Application Support/Godot/app_userdata/StimuWrite/` 
 Linux: `~/.local/share/godot/app_userdata/StimuWrite/`
 
 Happy theming! 
