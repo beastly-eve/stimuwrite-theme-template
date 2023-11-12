@@ -70,6 +70,7 @@ You are now ready to make modifications to the theme element nodes and create yo
 - Click the reset circular arrow icon to start fresh on elements you want to style
 - Detailed documentation of Godot's GUI skinning can be found here https://docs.godotengine.org/en/3.5/tutorials/ui/gui_skinning.html
 - Changing fonts is currently not supported
+- Do not delete any nodes except for BackPanelOverride, that is the only optional node included in the template
 - **Not working?** Did you remember to change the root node of this scene to your theme id? Does your folder's name match with the folder_name variable? 
 
 ## Exporting your theme
