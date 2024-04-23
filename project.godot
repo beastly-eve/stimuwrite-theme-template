@@ -12,6 +12,14 @@ config_version=4
 
 config/name="Stimuwrite-theme-template"
 
+[autoload]
+
+ThemingHelper="*res://addons/stimuwrite_theming_helper/theming-helper.gd"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/stimuwrite_theming_helper/plugin.cfg" )
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true

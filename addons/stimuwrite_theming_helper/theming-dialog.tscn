@@ -1,0 +1,6 @@
+[gd_scene format=2]
+
+[node name="ThemingConfirmationDialog" type="ConfirmationDialog"]
+margin_right = 400.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 400, 140 )
