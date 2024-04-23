@@ -15,7 +15,12 @@ func _on_CreateNewTheme_pressed():
 		ThemingHelper.wiz_theme_author = theme_author
 		ThemingHelper.wiz_theme_version = theme_version
 		ThemingHelper.wiz_theme_type = get_parent().get_node("StartingTypeDropdown").selected
+		ThemingHelper.wiz_theme_custom_emoji = get_parent().get_node("CustomEmoji").pressed as bool
+		ThemingHelper.wiz_theme_custom_bg = get_parent().get_node("CustomBackground").pressed as bool
 		get_parent().get_node("ErrorTextPanel").visible = false
+		print(ThemingHelper.wiz_theme_custom_emoji)
+		print(ThemingHelper.wiz_theme_custom_bg)
+		ThemingHelper.create_new_theme()
 	else:
 		get_parent().get_node("ConfirmationTextPanel").visible = false
 		get_parent().get_node("ErrorTextPanel").visible = true

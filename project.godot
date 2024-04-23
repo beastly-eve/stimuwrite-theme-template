@@ -18,7 +18,7 @@ ThemingHelper="*res://addons/stimuwrite_theming_helper/theming-helper.gd"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/stimuwrite_theming_helper/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/godot-plugin-refresher/plugin.cfg", "res://addons/stimuwrite_theming_helper/plugin.cfg" )
 
 [gui]
 
