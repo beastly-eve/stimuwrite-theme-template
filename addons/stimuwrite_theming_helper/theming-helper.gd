@@ -40,25 +40,34 @@ func create_new_theme():
 	
 
 func create_folders_and_files(theme_folder_name, theme_type):
-	var starter_assets_path: String
+	var starter_template_path: String
 	var theme_folder_path = "res://themes/" + theme_folder_name
 	
 	if theme_type == 0:
-		starter_assets_path = light_theme_starter_path
+		starter_template_path = light_theme_starter_path
 		
 	var dir = Directory.new()
 	
 	# Make the theme folders
 	var err = dir.make_dir_recursive(theme_folder_path + "/assets")
 	
-	# Add the emoji folder if the option was checked
+	# Copy over the scene and script
+	err = dir.copy(starter_template_path + "/theme.tscn", theme_folder_path + "/theme.tscn")
+	err = dir.copy(starter_template_path + "/theme-name-here.gd", theme_folder_path + "/" + theme_folder_name + ".gd")
+	
+	# Copy main asset folder
+	copy_asset_folder_contents(starter_template_path + "/assets/", theme_folder_path + "/assets/")
+	
+	# Add the emoji folder and contents if the option was checked
 	if err == OK && wiz_theme_custom_emoji == true:
 		err = dir.make_dir(theme_folder_path + "/assets/emoji/")
-		
-	err = dir.copy(starter_assets_path + "/theme.tscn", theme_folder_path + "/theme.tscn")
-	err = dir.copy(starter_assets_path + "/theme-name-here.gd", theme_folder_path + "/" + theme_folder_name + ".gd")
+		copy_asset_folder_contents(starter_template_path + "/assets/emoji/", theme_folder_path + "/assets/emoji/")
 	
-	if dir.open(starter_assets_path) == OK:
+
+func copy_asset_folder_contents(starter_asset_folder_path, theme_asset_folder_path):
+	var dir = Directory.new()
+	# Copy assets
+	if dir.open(starter_asset_folder_path) == OK:
 		dir.list_dir_begin(true, true)
 		var file_name = dir.get_next()
 		
@@ -66,6 +75,11 @@ func create_folders_and_files(theme_folder_name, theme_type):
 			if dir.current_is_dir():
 				print("Found directory: " + file_name)
 			else:
+				if file_name.get_extension() != "import" && not file_name == "background.jpg" && not file_name == "background.ogv" && not wiz_theme_custom_bg:
+					dir.copy(starter_asset_folder_path + file_name, theme_asset_folder_path + file_name)
+				elif file_name.get_extension() != "import" && wiz_theme_custom_bg:
+					dir.copy(starter_asset_folder_path + file_name, theme_asset_folder_path + file_name)
+				
 				print("Found file: " + file_name)
 			file_name = dir.get_next()
 	else:
