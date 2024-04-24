@@ -21,7 +21,7 @@ func _notification(what):
 """
 
 func slugify_string(string: String, seperator: String):
-	var allow_list = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", seperator]
+	var allow_list = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", seperator]
 	var output:= ""
 	
 	string = string.to_lower()
@@ -36,7 +36,7 @@ func slugify_string(string: String, seperator: String):
 	return output
 
 func rescan_files():
-	# Scan the file system - IS THIS WORKING?
+	# Scan the file system 
 	var ep = EditorPlugin.new()
 	var fs = ep.get_editor_interface().get_resource_filesystem()
 	if not fs.is_scanning():
@@ -56,10 +56,13 @@ func create_new_theme():
 	
 	create_folders_and_files(theme_folder_name, starter_template_path)
 	var new_script = create_theme_script(wiz_theme_name, wiz_theme_author, wiz_theme_version, theme_id, theme_folder_name, theme_pack_name, starter_template_path)
-	create_theme_scene(theme_folder_path, theme_id, starter_template_path, new_script)
+	var new_scene_path = create_theme_scene(theme_folder_path, theme_id, starter_template_path, new_script)
 	
 	rescan_files()
 	
+	var ep = EditorPlugin.new()
+	ep.get_editor_interface().set_main_screen_editor("2D")
+	ep.get_editor_interface().open_scene_from_path(new_scene_path)
 
 func create_folders_and_files(theme_folder_name, starter_template_path):
 	var theme_folder_path = "res://themes/" + theme_folder_name	
@@ -115,39 +118,47 @@ func create_theme_scene(theme_folder_path, theme_id, starter_template_path, new_
 	working_theme_scene.set_script(new_script)
 	print(working_theme_scene)
 	
-#	var off_icon_image = Image.new()
-#	print("Attempting to load: " + theme_folder_path + "/assets/light_toggle_off.png")
-#	off_icon_image.load(theme_folder_path + "/assets/light_toggle_off.png")
-#	print(off_icon_image)
-#	var off_icon_image_texture = ImageTexture.new()
-#	var off_icon_stream_texture = StreamTexture.new()
-#	off_icon_stream_texture.load(theme_folder_path + "/assets/light_toggle_off.png")
-#	off_icon_image_texture.create_from_image(off_icon_image)
-#	working_theme_scene.get_node("CheckButtonOverride").add_icon_override("off", off_icon_stream_texture)
-	
 	var result = packed_scene.pack(working_theme_scene)
 	
 	if result == OK:
 		ResourceSaver.save(theme_folder_path + "/theme.tscn", packed_scene)
 		
+		return theme_folder_path + "/theme.tscn"
+		
 
 func create_theme_script(theme_name, theme_author, theme_version, theme_id, theme_folder_name, pack_name, starter_template_path):
 	var theme_folder_path = "res://themes/" + theme_folder_name
 	var main_code_path = starter_template_path + "/theme-name-here.gd"
-	var optional_code_path = starter_template_path + "/optional-params.gd"
+	var optional_code_path_bg = starter_template_path + "/optional-params-bg.gd"
+	var optional_code_path_emoji = starter_template_path + "/optional-params-emoji.gd"
+	var opt_bg_source_code:= ""
+	var opt_emoji_source_code:= ""
 	
 	var f=File.new()
 	f.open(main_code_path, File.READ)
 	
 	var new_script = GDScript.new()
 	var new_source_code = f.get_as_text()
+	f.close()
 	
+	# Set optional code params
+	if wiz_theme_custom_bg:
+		f.open(optional_code_path_bg, File.READ)
+		new_source_code = new_source_code + f.get_as_text()
+		f.close()
+		
+	if wiz_theme_custom_emoji:
+		f.open(optional_code_path_emoji, File.READ)
+		new_source_code = new_source_code + f.get_as_text()
+		f.close()
+	
+	# Add in the theme values and optional code
 	new_source_code = new_source_code.format([theme_name, theme_author, theme_version, theme_id, theme_folder_name, pack_name]) + closing_code
 	
 	new_script.source_code = new_source_code
 	new_script.resource_path = theme_folder_path + "/" + theme_folder_name + ".gd"
 	ResourceSaver.save(new_script.resource_path, new_script)
 	new_script.reload()
-	f.close()
+
 	
 	return new_script
