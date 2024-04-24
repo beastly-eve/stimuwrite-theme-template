@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/checkbox-checked-disabled.png-591228f0c223341f43c50198e9c879c6.stex"
+path="res://.import/toggle_off.png-fbb980e5aea400bb63c4356bbb838d9d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/stimuwrite_theming_helper/dark-theme-starter-files/assets/checkbox-checked-disabled.png"
-dest_files=[ "res://.import/checkbox-checked-disabled.png-591228f0c223341f43c50198e9c879c6.stex" ]
+source_file="res://addons/stimuwrite_theming_helper/light-theme-starter-files/assets/toggle_off.png"
+dest_files=[ "res://.import/toggle_off.png-fbb980e5aea400bb63c4356bbb838d9d.stex" ]
 
 [params]
 

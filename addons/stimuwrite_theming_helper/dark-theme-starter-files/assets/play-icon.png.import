@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/close_white.png-1898926bfebccabfeee852884bf9f3c7.stex"
+path="res://.import/play-icon.png-22ad87c980e355a0c57e99c18e2866fa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/stimuwrite_theming_helper/dark-theme-starter-files/assets/close_white.png"
-dest_files=[ "res://.import/close_white.png-1898926bfebccabfeee852884bf9f3c7.stex" ]
+source_file="res://addons/stimuwrite_theming_helper/dark-theme-starter-files/assets/play-icon.png"
+dest_files=[ "res://.import/play-icon.png-22ad87c980e355a0c57e99c18e2866fa.stex" ]
 
 [params]
 

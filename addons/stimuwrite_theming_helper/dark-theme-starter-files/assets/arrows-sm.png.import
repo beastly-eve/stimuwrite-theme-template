@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/checkbutton_checked_light.png-f242bdabdbc5a6b8ec7e3e4b6b2f78d4.stex"
+path="res://.import/arrows-sm.png-f357d805d290daf003970792b3cf3264.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/stimuwrite_theming_helper/light-theme-starter-files/assets/checkbutton_checked_light.png"
-dest_files=[ "res://.import/checkbutton_checked_light.png-f242bdabdbc5a6b8ec7e3e4b6b2f78d4.stex" ]
+source_file="res://addons/stimuwrite_theming_helper/dark-theme-starter-files/assets/arrows-sm.png"
+dest_files=[ "res://.import/arrows-sm.png-f357d805d290daf003970792b3cf3264.stex" ]
 
 [params]
 

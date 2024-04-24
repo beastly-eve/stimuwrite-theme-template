@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/checkbutton_checked_disabled_light.png-bdcede02b525af63e3c6808bd7c24888.stex"
+path="res://.import/spinbox_updown.png-c5a78890a5487dd20b03904796e923ea.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/stimuwrite_theming_helper/light-theme-starter-files/assets/checkbutton_checked_disabled_light.png"
-dest_files=[ "res://.import/checkbutton_checked_disabled_light.png-bdcede02b525af63e3c6808bd7c24888.stex" ]
+source_file="res://addons/stimuwrite_theming_helper/light-theme-starter-files/assets/spinbox_updown.png"
+dest_files=[ "res://.import/spinbox_updown.png-c5a78890a5487dd20b03904796e923ea.stex" ]
 
 [params]
 

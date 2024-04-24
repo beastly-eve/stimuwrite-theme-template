@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/classic-play-icon.png-07c7f265383a8ffe3c3fe6b4bd61a965.stex"
+path="res://.import/checkbutton_checked.png-830b88f5e215052a92ae59992136f2c2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/stimuwrite_theming_helper/dark-theme-starter-files/assets/classic-play-icon.png"
-dest_files=[ "res://.import/classic-play-icon.png-07c7f265383a8ffe3c3fe6b4bd61a965.stex" ]
+source_file="res://addons/stimuwrite_theming_helper/dark-theme-starter-files/assets/checkbutton_checked.png"
+dest_files=[ "res://.import/checkbutton_checked.png-830b88f5e215052a92ae59992136f2c2.stex" ]
 
 [params]
 

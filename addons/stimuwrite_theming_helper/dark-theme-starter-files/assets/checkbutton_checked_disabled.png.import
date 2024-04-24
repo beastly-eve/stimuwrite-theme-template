@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/speaker-with-three-sound-waves_1f50a.png-b27e93aa96e32e98010dca746b60fd10.stex"
+path="res://.import/checkbutton_checked_disabled.png-3e5f2dae2b25ec83a2764b900cf3242a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/stimuwrite_theming_helper/dark-theme-starter-files/assets/speaker-with-three-sound-waves_1f50a.png"
-dest_files=[ "res://.import/speaker-with-three-sound-waves_1f50a.png-b27e93aa96e32e98010dca746b60fd10.stex" ]
+source_file="res://addons/stimuwrite_theming_helper/dark-theme-starter-files/assets/checkbutton_checked_disabled.png"
+dest_files=[ "res://.import/checkbutton_checked_disabled.png-3e5f2dae2b25ec83a2764b900cf3242a.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/example-backpanel-bg.png-df03ba9e6dfaa0469b55396b9135aabc.stex"
+path="res://.import/checkbutton_checked.png-663de2fcc1e62324b6b4abd2f430b9c8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/stimuwrite_theming_helper/light-theme-starter-files/assets/example-backpanel-bg.png"
-dest_files=[ "res://.import/example-backpanel-bg.png-df03ba9e6dfaa0469b55396b9135aabc.stex" ]
+source_file="res://addons/stimuwrite_theming_helper/light-theme-starter-files/assets/checkbutton_checked.png"
+dest_files=[ "res://.import/checkbutton_checked.png-663de2fcc1e62324b6b4abd2f430b9c8.stex" ]
 
 [params]
 

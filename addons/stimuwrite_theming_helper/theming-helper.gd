@@ -113,12 +113,41 @@ func copy_asset_folder_contents(starter_asset_folder_path, theme_asset_folder_pa
 
 func create_theme_scene(theme_folder_path, theme_id, starter_template_path, new_script):
 	var starter_theme_scene = load(starter_template_path + "/theme.tscn")
-	var working_theme_scene = starter_theme_scene.instance()
+	var working_theme_scene = starter_theme_scene.duplicate(true).instance()
 	var packed_scene = PackedScene.new()
 	
 	working_theme_scene.name = theme_id
 	working_theme_scene.set_script(new_script)
 	print(working_theme_scene)
+	
+	#	var off_icon_image = Image.new()
+	#	print("Attempting to load: " + theme_folder_path + "/assets/light_toggle_off.png")
+	#	off_icon_image.load(theme_folder_path + "/assets/light_toggle_off.png")
+	#	print(off_icon_image)
+	#	var off_icon_image_texture = ImageTexture.new()
+	#var off_icon_stream_texture = StreamTexture.new()
+	# off_icon_stream_texture.load_path(theme_folder_path + "/assets/light_toggle_off.png")
+	#off_icon_stream_texture.resource_path = theme_folder_path + "/assets/light_toggle_off.png"
+	#	off_icon_image_texture.create_from_image(off_icon_image)
+	working_theme_scene.get_node("CheckButtonOverride").get_icon("off").resource_path = theme_folder_path + "/assets/toggle_off.png"
+	working_theme_scene.get_node("CheckButtonOverride").get_icon("on").resource_path = theme_folder_path + "/assets/toggle_on.png"
+	working_theme_scene.get_node("BackgroundPlayButtonOverride").get_icon("checked").resource_path = theme_folder_path + "/assets/pause-icon.png"
+	working_theme_scene.get_node("BackgroundPlayButtonOverride").get_icon("unchecked").resource_path = theme_folder_path + "/assets/play-icon.png"
+	working_theme_scene.get_node("OptionButtonOverride").get_icon("arrow").resource_path = theme_folder_path + "/assets/arrows-sm.png"
+	working_theme_scene.get_node("SpinBoxOverride").get_icon("updown").resource_path = theme_folder_path + "/assets/spinbox_updown.png"
+	working_theme_scene.get_node("CheckBoxOverride").get_icon("checked_disabled").resource_path = theme_folder_path + "/assets/checkbutton_checked_disabled.png"
+	working_theme_scene.get_node("CheckBoxOverride").get_icon("checked").resource_path = theme_folder_path + "/assets/checkbutton_checked.png"
+	working_theme_scene.get_node("CheckBoxOverride").get_icon("unchecked").resource_path = theme_folder_path + "/assets/checkbutton_unchecked.png"
+	working_theme_scene.get_node("VolumeSliderOverride").get_icon("grabber").resource_path = theme_folder_path + "/assets/volume-icon.png"
+	working_theme_scene.get_node("VolumeSliderOverride").get_icon("grabber_highlight").resource_path = theme_folder_path + "/assets/volume-icon.png"
+	
+	if wiz_theme_type == 1:
+		working_theme_scene.get_node("WindowOverride").get_icon("close").resource_path = theme_folder_path + "/assets/close.png"
+		
+	
+	
+	
+	
 	
 	var result = packed_scene.pack(working_theme_scene)
 	

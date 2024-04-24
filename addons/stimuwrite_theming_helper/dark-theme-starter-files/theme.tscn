@@ -1,7 +1,16 @@
-[gd_scene load_steps=59 format=2]
+[gd_scene load_steps=58 format=2]
 
-[ext_resource path="res://addons/stimuwrite_theming_helper/dark-theme-starter-files/assets/speaker-with-three-sound-waves_1f50a.png" type="Texture" id=2]
+[ext_resource path="res://addons/stimuwrite_theming_helper/dark-theme-starter-files/assets/toggle_off.png" type="Texture" id=1]
+[ext_resource path="res://addons/stimuwrite_theming_helper/dark-theme-starter-files/assets/volume-icon.png" type="Texture" id=2]
 [ext_resource path="res://addons/stimuwrite_theming_helper/dark-theme-starter-files/assets/heart-icon.png" type="Texture" id=3]
+[ext_resource path="res://addons/stimuwrite_theming_helper/dark-theme-starter-files/assets/arrows-sm.png" type="Texture" id=4]
+[ext_resource path="res://addons/stimuwrite_theming_helper/dark-theme-starter-files/assets/checkbutton_checked.png" type="Texture" id=5]
+[ext_resource path="res://addons/stimuwrite_theming_helper/dark-theme-starter-files/assets/pause-icon.png" type="Texture" id=6]
+[ext_resource path="res://addons/stimuwrite_theming_helper/dark-theme-starter-files/assets/toggle_on.png" type="Texture" id=7]
+[ext_resource path="res://addons/stimuwrite_theming_helper/dark-theme-starter-files/assets/checkbutton_unchecked.png" type="Texture" id=8]
+[ext_resource path="res://addons/stimuwrite_theming_helper/dark-theme-starter-files/assets/play-icon.png" type="Texture" id=9]
+[ext_resource path="res://addons/stimuwrite_theming_helper/dark-theme-starter-files/assets/spinbox_updown.png" type="Texture" id=10]
+[ext_resource path="res://addons/stimuwrite_theming_helper/dark-theme-starter-files/assets/checkbutton_checked_disabled.png" type="Texture" id=12]
 
 [sub_resource type="StyleBoxFlat" id=177]
 bg_color = Color( 0.27451, 0.243137, 0.419608, 1 )
@@ -77,11 +86,6 @@ expand_margin_top = 5.0
 expand_margin_bottom = 4.0
 shadow_color = Color( 0, 0, 0, 0.239216 )
 
-[sub_resource type="StreamTexture" id=176]
-resource_local_to_scene = true
-flags = 4
-load_path = "res://.import/close_white.png-1898926bfebccabfeee852884bf9f3c7.stex"
-
 [sub_resource type="StyleBoxFlat" id=159]
 bg_color = Color( 0.188235, 0.196078, 0.243137, 1 )
 border_width_top = 24
@@ -108,7 +112,7 @@ Button/styles/hover = SubResource( 156 )
 Button/styles/normal = SubResource( 157 )
 Button/styles/pressed = SubResource( 158 )
 WindowDialog/colors/title_color = Color( 0.92549, 0.92549, 0.929412, 1 )
-WindowDialog/icons/close = SubResource( 176 )
+WindowDialog/icons/close = null
 WindowDialog/icons/close_highlight = null
 WindowDialog/styles/panel = SubResource( 159 )
 
@@ -244,11 +248,6 @@ VScrollBar/styles/grabber = SubResource( 144 )
 VScrollBar/styles/grabber_pressed = SubResource( 144 )
 VScrollBar/styles/scroll = SubResource( 146 )
 VScrollBar/styles/scroll_focus = SubResource( 146 )
-
-[sub_resource type="StreamTexture" id=167]
-resource_local_to_scene = true
-flags = 4
-load_path = "res://.import/spinbox_updown_light_grey.png-f8b8663db19071b09a592c69ef3dbb24.stex"
 
 [sub_resource type="StyleBoxFlat" id=129]
 content_margin_left = 6.0
@@ -423,16 +422,6 @@ shadow_color = Color( 0.25098, 0.266667, 0.333333, 0.831373 )
 shadow_size = 1
 shadow_offset = Vector2( 1, 1 )
 
-[sub_resource type="StreamTexture" id=171]
-resource_local_to_scene = true
-flags = 4
-load_path = "res://.import/toggle_off.png-13d949835d39e511091b7d3dcff6a8de.stex"
-
-[sub_resource type="StreamTexture" id=172]
-resource_local_to_scene = true
-flags = 4
-load_path = "res://.import/toggle_on.png-30629f07b91b5e3dc86d9a1c8a8f6705.stex"
-
 [sub_resource type="Theme" id=165]
 VScrollBar/styles/grabber = SubResource( 144 )
 VScrollBar/styles/grabber_pressed = SubResource( 144 )
@@ -454,16 +443,6 @@ bg_color = Color( 0.27451, 0.243137, 0.419608, 1 )
 [sub_resource type="StyleBoxFlat" id=150]
 bg_color = Color( 0.27451, 0.243137, 0.419608, 1 )
 
-[sub_resource type="StreamTexture" id=168]
-resource_local_to_scene = true
-flags = 4
-load_path = "res://.import/classic-pause-icon.png-e5f75db02144952a7dadca8c996ced36.stex"
-
-[sub_resource type="StreamTexture" id=169]
-resource_local_to_scene = true
-flags = 4
-load_path = "res://.import/classic-play-icon.png-07c7f265383a8ffe3c3fe6b4bd61a965.stex"
-
 [sub_resource type="StyleBoxFlat" id=123]
 bg_color = Color( 0.129412, 0.133333, 0.168627, 1 )
 
@@ -471,11 +450,6 @@ bg_color = Color( 0.129412, 0.133333, 0.168627, 1 )
 LineEdit/colors/cursor_color = Color( 0.482353, 0.482353, 0.482353, 1 )
 LineEdit/colors/font_color = Color( 0.937255, 0.937255, 0.941176, 1 )
 LineEdit/styles/normal = SubResource( 123 )
-
-[sub_resource type="StreamTexture" id=170]
-resource_local_to_scene = true
-flags = 4
-load_path = "res://.import/spinbox_updown.png-442f27a8a4693100e29cd03e2c6bd4c8.stex"
 
 [sub_resource type="Theme" id=115]
 VScrollBar/styles/grabber = SubResource( 144 )
@@ -488,21 +462,6 @@ bg_color = Color( 0.25098, 0.266667, 0.333333, 1 )
 
 [sub_resource type="StyleBoxFlat" id=117]
 bg_color = Color( 0.180392, 0.2, 0.25098, 0.941176 )
-
-[sub_resource type="StreamTexture" id=173]
-resource_local_to_scene = true
-flags = 4
-load_path = "res://.import/checkbox-checked-disabled.png-591228f0c223341f43c50198e9c879c6.stex"
-
-[sub_resource type="StreamTexture" id=174]
-resource_local_to_scene = true
-flags = 4
-load_path = "res://.import/checkbox-checked.png-a9acc07ada55b883c1259fc67cca3ebf.stex"
-
-[sub_resource type="StreamTexture" id=175]
-resource_local_to_scene = true
-flags = 4
-load_path = "res://.import/checkbox-unchecked.png-8a2230b80743d058a97a550e39030a3b.stex"
 
 [node name="theme-id-here" type="Control" groups=["ThemeGroup"]]
 margin_left = -160.0
@@ -594,7 +553,7 @@ custom_colors/font_color_focus = Color( 0.819608, 0.839216, 0.894118, 1 )
 custom_colors/font_color = Color( 0.819608, 0.839216, 0.894118, 1 )
 custom_colors/font_color_hover = Color( 0.937255, 0.937255, 0.941176, 1 )
 custom_colors/font_color_pressed = Color( 0.847059, 0.847059, 0.847059, 1 )
-custom_icons/arrow = SubResource( 167 )
+custom_icons/arrow = ExtResource( 4 )
 custom_styles/hover = SubResource( 129 )
 custom_styles/pressed = SubResource( 125 )
 custom_styles/normal = SubResource( 127 )
@@ -605,7 +564,6 @@ items = [ "Test!", ExtResource( 3 ), false, 0, null ]
 selected = 0
 
 [node name="LightThemePopUpMenu" type="PopupMenu" parent="OptionButtonOverride"]
-visible = true
 margin_left = -1.0
 margin_top = 32.0
 margin_right = 136.0
@@ -682,8 +640,8 @@ custom_colors/font_color_hover_pressed = Color( 0.639216, 0.639216, 0.639216, 1 
 custom_colors/font_color = Color( 0.592157, 0.619608, 0.698039, 1 )
 custom_colors/font_color_hover = Color( 0.639216, 0.639216, 0.639216, 1 )
 custom_colors/font_color_pressed = Color( 0.592157, 0.619608, 0.698039, 1 )
-custom_icons/off = SubResource( 171 )
-custom_icons/on = SubResource( 172 )
+custom_icons/off = ExtResource( 1 )
+custom_icons/on = ExtResource( 7 )
 text = "Dark Theme Check"
 
 [node name="LinkButtonOverride" type="LinkButton" parent="."]
@@ -740,8 +698,8 @@ margin_right = 968.0
 margin_bottom = 299.0
 focus_mode = 0
 mouse_filter = 2
-custom_icons/checked = SubResource( 168 )
-custom_icons/unchecked = SubResource( 169 )
+custom_icons/checked = ExtResource( 6 )
+custom_icons/unchecked = ExtResource( 9 )
 pressed = true
 
 [node name="SpinBoxOverride" type="SpinBox" parent="."]
@@ -751,7 +709,7 @@ margin_right = 974.0
 margin_bottom = 196.0
 mouse_filter = 2
 theme = SubResource( 70 )
-custom_icons/updown = SubResource( 170 )
+custom_icons/updown = ExtResource( 10 )
 min_value = 10.0
 max_value = 20000.0
 step = 10.0
@@ -786,7 +744,7 @@ custom_colors/font_color_hover_pressed = Color( 0.858824, 0.858824, 0.858824, 1 
 custom_colors/font_color = Color( 0.819608, 0.839216, 0.894118, 1 )
 custom_colors/font_color_hover = Color( 0.858824, 0.858824, 0.858824, 1 )
 custom_colors/font_color_pressed = Color( 0.819608, 0.839216, 0.894118, 1 )
-custom_icons/checked_disabled = SubResource( 173 )
-custom_icons/checked = SubResource( 174 )
-custom_icons/unchecked = SubResource( 175 )
+custom_icons/checked_disabled = ExtResource( 12 )
+custom_icons/checked = ExtResource( 5 )
+custom_icons/unchecked = ExtResource( 8 )
 text = "Check box!"

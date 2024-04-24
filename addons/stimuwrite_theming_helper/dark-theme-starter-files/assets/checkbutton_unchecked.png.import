@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/classic-pause-icon.png-e5f75db02144952a7dadca8c996ced36.stex"
+path="res://.import/checkbutton_unchecked.png-60c9de3824c4256bae20a85b7efa0879.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/stimuwrite_theming_helper/dark-theme-starter-files/assets/classic-pause-icon.png"
-dest_files=[ "res://.import/classic-pause-icon.png-e5f75db02144952a7dadca8c996ced36.stex" ]
+source_file="res://addons/stimuwrite_theming_helper/dark-theme-starter-files/assets/checkbutton_unchecked.png"
+dest_files=[ "res://.import/checkbutton_unchecked.png-60c9de3824c4256bae20a85b7efa0879.stex" ]
 
 [params]
 

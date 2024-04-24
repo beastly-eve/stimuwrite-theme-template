@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/checkbox-checked.png-a9acc07ada55b883c1259fc67cca3ebf.stex"
+path="res://.import/checkbutton_unchecked.png-3b8e1e827b5eff458a41f6c41de44cfc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/stimuwrite_theming_helper/dark-theme-starter-files/assets/checkbox-checked.png"
-dest_files=[ "res://.import/checkbox-checked.png-a9acc07ada55b883c1259fc67cca3ebf.stex" ]
+source_file="res://addons/stimuwrite_theming_helper/light-theme-starter-files/assets/checkbutton_unchecked.png"
+dest_files=[ "res://.import/checkbutton_unchecked.png-3b8e1e827b5eff458a41f6c41de44cfc.stex" ]
 
 [params]
 
