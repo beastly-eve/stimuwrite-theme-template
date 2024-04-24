@@ -2,11 +2,17 @@
 
 Use this template to make your own [StimuWrite](https://eveharms.itch.io/stimuwrite) themes! While I did dream that others would make their own themes for StimuWrite some day, the theming system wasn't exactly made with that in mind. My hope is that this template will make creating a theme for StimuWrite relatively simple for people who are willing to become comfortable with UI override in Godot. Currently, StimuWrite and it's themes are created using Godot Engine 3.5.3 
 
-StimuWrite does not "officially" support distributed third party themes due to liability reasons, so this template is only endorsed for personal use. If you want to  work together to distribute your theme, feel free to reach out.
+StimuWrite does not "officially" support distributed third party themes due to liability reasons, so this template is only endorsed for personal use. If you want to  work together to distribute your theme officially, feel free to reach out.
 
-This template and documentation are a work in progress so please bear with me and feel free to contribute. There is no error reporting for theming built into StimuWrite, so feel free to reach out to me if you are stuck. Make sure to follow the directions carefully because there are a few things that are required or your theme will silently fail.
+This template and documentation are a work in progress so please bear with me and feel free to contribute. There is little error reporting for theming built into StimuWrite, so feel free to reach out to me if you are stuck. Make sure to follow the directions carefully because there are a few things that are required or your theme will silently fail.
 
-## Introduction to the template and file setup
+## Using the Theme Wizard for Setup (new! easy!)
+
+Included in the template is now a Godot plugin that makes it easy to setup your new theme! The plugin appears in the left sidebar, but can be disabled after setup in Project > Project Settings > Plugins. Simply fill in your theme info and options and the wizard will setup your theme up in the correct manner for StimuWrite to read it.
+
+Using the wizard will skip the **Manual Template and file setup** and **Theme config script setup** steps and get straight to Editing your theme! 
+
+## Manual template and file setup
 
 1. Download the files and duplicate the root folder
 2. Rename the folder to your theme name using [kebab case](https://developer.mozilla.org/en-US/docs/Glossary/Kebab_case) and open it in [Godot Engine 3.5.3](https://godotengine.org/download/3.x/)
