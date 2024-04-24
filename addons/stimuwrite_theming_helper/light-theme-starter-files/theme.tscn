@@ -494,6 +494,7 @@ custom_styles/normal = SubResource( 128 )
 icon_align = 2
 
 [node name="LightThemePopUpMenu" type="PopupMenu" parent="OptionButtonOverride"]
+visible = true
 margin_top = 31.0
 margin_right = 151.0
 margin_bottom = 131.0

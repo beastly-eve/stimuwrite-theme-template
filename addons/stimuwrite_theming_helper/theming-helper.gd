@@ -4,7 +4,7 @@ extends Node
 signal _create_new_theme_pressed(name, author, version)
 
 const light_theme_starter_path = "res://addons/stimuwrite_theming_helper/light-theme-starter-files"
-const dark_theme_starter_path = ""
+const dark_theme_starter_path = "res://addons/stimuwrite_theming_helper/dark-theme-starter-files/"
 
 var wiz_theme_name: String
 var wiz_theme_author: String
@@ -53,6 +53,8 @@ func create_new_theme():
 	
 	if wiz_theme_type == 0:
 		starter_template_path = light_theme_starter_path
+	else:
+		starter_template_path = dark_theme_starter_path
 	
 	create_folders_and_files(theme_folder_name, starter_template_path)
 	var new_script = create_theme_script(wiz_theme_name, wiz_theme_author, wiz_theme_version, theme_id, theme_folder_name, theme_pack_name, starter_template_path)
