@@ -559,7 +559,6 @@ custom_styles/hover = SubResource( 129 )
 custom_styles/pressed = SubResource( 125 )
 custom_styles/normal = SubResource( 127 )
 text = "Test!"
-icon = ExtResource( 3 )
 icon_align = 2
 items = [ "Test!", ExtResource( 3 ), false, 0, null ]
 selected = 0
