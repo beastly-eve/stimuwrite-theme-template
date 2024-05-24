@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=2]
+[gd_scene load_steps=61 format=2]
 
 [ext_resource path="res://addons/stimuwrite_theming_helper/light-theme-starter-files/assets/volume-icon.png" type="Texture" id=1]
 [ext_resource path="res://addons/stimuwrite_theming_helper/light-theme-starter-files/assets/toggle_on.png" type="Texture" id=2]
@@ -46,7 +46,7 @@ expand_margin_right = 12.0
 shadow_color = Color( 0, 0, 0, 0.239216 )
 shadow_size = 2
 
-[sub_resource type="StyleBoxFlat" id=119]
+[sub_resource type="StyleBoxFlat" id=145]
 resource_local_to_scene = true
 bg_color = Color( 0.909804, 0.909804, 0.909804, 1 )
 border_color = Color( 0.607843, 0.607843, 0.607843, 1 )
@@ -59,7 +59,7 @@ expand_margin_right = 12.0
 shadow_color = Color( 0, 0, 0, 0.239216 )
 shadow_size = 2
 
-[sub_resource type="StyleBoxFlat" id=120]
+[sub_resource type="StyleBoxFlat" id=146]
 resource_local_to_scene = true
 bg_color = Color( 0.729412, 0.729412, 0.729412, 1 )
 border_color = Color( 0.607843, 0.607843, 0.607843, 1 )
@@ -92,9 +92,72 @@ Button/colors/font_color_hover = Color( 0, 0, 0, 0.901961 )
 Button/colors/font_color_pressed = Color( 0, 0, 0, 0.901961 )
 Button/styles/focus = SubResource( 117 )
 Button/styles/hover = SubResource( 118 )
-Button/styles/normal = SubResource( 119 )
-Button/styles/pressed = SubResource( 120 )
+Button/styles/normal = SubResource( 145 )
+Button/styles/pressed = SubResource( 146 )
 WindowDialog/styles/panel = SubResource( 121 )
+
+[sub_resource type="StyleBoxFlat" id=147]
+resource_local_to_scene = true
+bg_color = Color( 0.858824, 0.858824, 0.858824, 1 )
+border_color = Color( 0.607843, 0.607843, 0.607843, 1 )
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+expand_margin_left = 12.0
+expand_margin_right = 12.0
+shadow_color = Color( 0, 0, 0, 0.239216 )
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id=148]
+resource_local_to_scene = true
+bg_color = Color( 0.909804, 0.909804, 0.909804, 1 )
+border_color = Color( 0.607843, 0.607843, 0.607843, 1 )
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+expand_margin_left = 12.0
+expand_margin_right = 12.0
+shadow_color = Color( 0, 0, 0, 0.239216 )
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id=149]
+resource_local_to_scene = true
+bg_color = Color( 0.729412, 0.729412, 0.729412, 1 )
+border_color = Color( 0.607843, 0.607843, 0.607843, 1 )
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+expand_margin_left = 12.0
+expand_margin_right = 12.0
+shadow_color = Color( 0, 0, 0, 0.239216 )
+shadow_size = 2
+
+[sub_resource type="StyleBoxFlat" id=150]
+resource_local_to_scene = true
+bg_color = Color( 0.729412, 0.729412, 0.729412, 1 )
+border_width_top = 24
+border_color = Color( 0.658824, 0.658824, 0.658824, 1 )
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+expand_margin_top = 22.0
+shadow_color = Color( 0, 0, 0, 0.101961 )
+shadow_size = 2
+shadow_offset = Vector2( 4, 4 )
+
+[sub_resource type="Theme" id=151]
+resource_local_to_scene = true
+Button/colors/font_color = Color( 0, 0, 0, 0.901961 )
+Button/colors/font_color_focus = Color( 0, 0, 0, 0.901961 )
+Button/colors/font_color_hover = Color( 0, 0, 0, 0.901961 )
+Button/colors/font_color_pressed = Color( 0, 0, 0, 0.901961 )
+Button/styles/focus = SubResource( 117 )
+Button/styles/hover = SubResource( 147 )
+Button/styles/normal = SubResource( 148 )
+Button/styles/pressed = SubResource( 149 )
+WindowDialog/styles/panel = SubResource( 150 )
 
 [sub_resource type="StyleBoxFlat" id=122]
 resource_local_to_scene = true
@@ -113,6 +176,18 @@ resource_local_to_scene = true
 
 [sub_resource type="StyleBoxFlat" id=47]
 bg_color = Color( 0.537255, 0.537255, 0.537255, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color( 0.768627, 0.768627, 0.768627, 1 )
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id=152]
+bg_color = Color( 0.282353, 0.752941, 0.980392, 1 )
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
@@ -147,6 +222,7 @@ TextEdit/styles/focus = SubResource( 123 )
 TextEdit/styles/normal = SubResource( 124 )
 TextEdit/styles/read_only = SubResource( 125 )
 VScrollBar/styles/grabber = SubResource( 47 )
+VScrollBar/styles/grabber_highlight = SubResource( 152 )
 VScrollBar/styles/grabber_pressed = SubResource( 48 )
 VScrollBar/styles/scroll = SubResource( 32 )
 VScrollBar/styles/scroll_focus = SubResource( 32 )
@@ -395,7 +471,7 @@ margin_top = -64.0
 margin_right = 972.0
 margin_bottom = 101.0
 mouse_filter = 2
-theme = SubResource( 49 )
+theme = SubResource( 151 )
 window_title = "Alert Dialog"
 dialog_text = "Testing!!! Testing!!! Testing!!! Testing!!! Testing!!! Testing!!! Testing!!! Testing!!! Testing!!! Testing!!! Testing!!! Testing!!! Testing!!! Testing!!! "
 dialog_autowrap = true
@@ -452,7 +528,6 @@ text = "Option Button"
 icon_align = 2
 
 [node name="LightThemePopUpMenu" type="PopupMenu" parent="OptionButtonOverride"]
-visible = true
 margin_top = 34.0
 margin_right = 137.0
 margin_bottom = 134.0
